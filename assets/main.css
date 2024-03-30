@@ -27,7 +27,6 @@ main {
   position: sticky;
   top: 3vh;
   width: auto;
-  height: -moz-fit-content;
   height: fit-content;
   min-height: 5rem;
 }
@@ -123,14 +122,14 @@ main {
 .about-photo img {
   width: 100%;
   aspect-ratio: 1;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 0 20%;
-     object-position: 0 20%;
+  object-fit: cover;
+  object-position: 0 20%;
 }
 
 /* Extra small devices (phones, 600px and down) */
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
 /* Large devices (laptops/desktops, 992px and up) */
-/* Extra large devices (large laptops and desktops, 1200px and up) *//*# sourceMappingURL=main.css.map */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+/*# sourceMappingURL=main.css.map */
