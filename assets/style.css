@@ -101,11 +101,15 @@ body {
 .window-button {
   width: 2rem;
   height: 2rem;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   line-height: 1;
   display: inline-block;
   margin: 0;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   font-size: 1.5rem;
 }
 .window-button:last-child {
@@ -165,7 +169,9 @@ body {
 .window-scroll {
   width: 2rem;
   height: 2rem;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: #F6E7D8;
   line-height: 0;
   font-size: 1.5rem;
@@ -186,6 +192,4 @@ body {
 .window-scrollbar--x {
   bottom: 0;
   width: calc(100% - 2.1rem);
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
