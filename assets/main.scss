@@ -1,4 +1,3 @@
-@charset "UTF-8";
 $dark-yellow: #DBB501;
 $yellow: #e8c872;
 $light-yellow: #FFF3CF;
@@ -25,15 +24,16 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
 
 h1 {
     font-family: "Silkscreen", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: xx-large;
-
+    font-size: 5rem;
+    -webkit-text-fill-color: #ffffff00;
+    -webkit-text-stroke: 4px navy;
 }
 
 /* Extra small devices (phones, 600px and down) */
