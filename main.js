@@ -11,6 +11,6 @@ function MakeWin(imgsrc, color, finId) {
 
 //settable
 //background-elemtns
-$(window).load(function () {
+window.onload = (event) => {
     MakeWin('./assets/images/draw1.jpg', 'yellow', 4);
-});
+};
