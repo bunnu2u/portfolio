@@ -7,20 +7,27 @@ function MakeWin(imgsrc, color, finId, visOnStart = false) {
                 $('#background-elemtns > #open #settable').attr('src', imgsrc);
                 $('#background-elemtns > #open').addClass(color);
                 $('#background-elemtns > #open').attr('id', finId);
+
                 if (visOnStart) {
                     //show on page load
-                    handleScroll(finId);
+                    var elemname = '#' + finId; $(elemname).addClass('window-show');
                 } else {
                     // Add event listener for scroll event
                     window.addEventListener('scroll', function () { handleScroll(finId); });
+                    var tagelem = document.getElementById(finId);
+                    var elemname = '#' + finId;
+                    if (isInViewport(tagelem)) {
+                        $(elemname).addClass('window-show');
+                    }
                 }
+
+
                 resolve(); // Resolve the promise after the entire function has executed
             })
             .catch(error => {
             });
     });
 }
-
 
 function isInViewport(element) {
     var rect = element.getBoundingClientRect();
@@ -37,7 +44,7 @@ function handleScroll(elemId) {
     if (isInViewport(tagelem)) {
         $(elemname).addClass('window-show');
         // Remove the event listener once the animation is triggered
-        window.removeEventListener('scroll', handleScroll);
+        //window.removeEventListener('scroll', handleScroll);
     }
 }
 
@@ -50,6 +57,22 @@ async function LoadAndStyleBackground() {
     });
     MakeWin('./assets/images/draw1.jpg', 'yellow', 'bgw1', true).then(() => {
         $('#bgw1').addClass('pos-3')
+    });
+
+    MakeWin('./assets/images/frog.jpg', 'yellow', 'bgw4').then(() => {
+        $('#bgw4').addClass('pos-4')
+    });
+    MakeWin('./assets/images/spaceship.png', 'yellow', 'bgw5').then(() => {
+        $('#bgw5').addClass('pos-5')
+    });
+    MakeWin('assets/images/prog.png', 'yellow', 'bgw6', true).then(() => {
+        $('#bgw6').addClass('pos-6')
+    });
+    MakeWin('./assets/images/bear.png', 'yellow', 'bgw7', true).then(() => {
+        $('#bgw7').addClass('pos-7')
+    });
+    MakeWin('./assets/images/cinamoo.jpg', 'yellow', 'bgw8').then(() => {
+        $('#bgw8').addClass('pos-8')
     });
 }
 //settable

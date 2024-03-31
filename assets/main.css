@@ -145,21 +145,197 @@ main {
 }
 .window {
   position: absolute;
+  opacity: 0;
 }
 .window-show {
-  opacity: 0;
   transform: translateY(20px);
-  animation: fadeUp 0.3s ease-in-out 0s forwards;
+  animation: fadeUp 0.9s ease-in-out 0s forwards;
+}
+.window-show#bgw3 {
+  animation: fadeUp 0.7s ease-in-out 0s forwards;
+}
+.window-show #bgw1, .window-show #bgw5, .window-show #bgw7 {
+  animation: fadeUp 0.5s ease-in-out 0s forwards;
 }
 
 /* Extra small devices (phones, 600px and down) */
-/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .about {
+    padding: 3vh 0;
+  }
+  .heading {
+    margin-bottom: 1rem;
+    margin-left: 0;
+    font-size: 2rem;
+  }
+  .about-photo {
+    display: block;
+    width: 10rem;
+    border: 6px solid black;
+    background-color: rgba(255, 255, 255, 0);
+    overflow: visible;
+    height: 10rem;
+    padding: 0;
+  }
+  .pos-1 {
+    top: 5vh;
+    right: 5vw;
+  }
+  .pos-1 img {
+    width: 15rem;
+    height: auto;
+  }
+  .pos-2 {
+    display: none;
+    top: 0%;
+    left: 0vw;
+    z-index: -10;
+  }
+  .pos-2 img {
+    width: 20vw;
+    height: auto;
+  }
+  .pos-3 {
+    top: 60vh;
+    right: 6vw;
+  }
+  .pos-3 img {
+    width: 13rem;
+    height: auto;
+  }
+  .pos-4 {
+    top: 146vh;
+    left: 4vw;
+    z-index: -3;
+  }
+  .pos-4 img {
+    width: 13rem;
+    height: auto;
+  }
+  .pos-5 {
+    top: 26vh;
+    left: 8vw;
+    z-index: -3;
+  }
+  .pos-5 img {
+    width: 60vw;
+    height: auto;
+  }
+  .pos-6 {
+    top: 160vw;
+    left: 6vw;
+    z-index: -10;
+  }
+  .pos-6 img {
+    width: 20rem;
+    height: auto;
+  }
+  .pos-7 {
+    top: 180vh;
+    right: 2vw;
+    z-index: -20;
+  }
+  .pos-7 img {
+    width: 15rem;
+    height: auto;
+  }
+  .pos-8 {
+    display: none;
+    top: 130vh;
+    left: 70vw;
+  }
+  .pos-8 img {
+    width: 20vw;
+    height: auto;
+  }
+}
 /* Medium devices (landscape tablets, 768px and up) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  .about {
+    padding: 3vh 0;
+  }
+  .heading {
+    margin-bottom: 1rem;
+    margin-left: 0;
+    font-size: 2rem;
+  }
+  .pos-1 {
+    top: 50vh;
+    right: 5vw;
+  }
+  .pos-1 img {
+    width: 15rem;
+    height: auto;
+  }
+  .pos-2 {
+    top: 3vh;
+    right: 7vw;
+    z-index: -10;
+  }
+  .pos-2 img {
+    width: 12rem;
+    height: auto;
+  }
+  .pos-3 {
+    top: 60vh;
+    left: 6vw;
+  }
+  .pos-3 img {
+    width: 13rem;
+    height: auto;
+  }
+  .pos-4 {
+    display: none;
+    top: 146vh;
+    left: 4vw;
+    z-index: -3;
+  }
+  .pos-4 img {
+    width: 13rem;
+    height: auto;
+  }
+  .pos-5 {
+    top: 30vh;
+    left: 40vw;
+    z-index: -3;
+  }
+  .pos-5 img {
+    width: 40vw;
+    height: auto;
+  }
+  .pos-6 {
+    top: 10vw;
+    left: 6vw;
+    z-index: -10;
+  }
+  .pos-6 img {
+    width: 20rem;
+    height: auto;
+  }
+  .pos-7 {
+    top: 180vh;
+    right: 2vw;
+    z-index: -20;
+  }
+  .pos-7 img {
+    width: 15rem;
+    height: auto;
+  }
+  .pos-8 {
+    top: 130vh;
+    right: 4vw;
+  }
+  .pos-8 img {
+    width: 12rem;
+    height: auto;
+  }
+}
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .pos-1 {
     top: 20vh;
-    left: calc(10vw - 1rem);
+    left: 5vw;
   }
   .pos-1 img {
     width: 30vw;
@@ -183,8 +359,47 @@ main {
     height: auto;
   }
   .pos-4 {
-    top: 10rem;
-    left: 10rem;
+    top: 80vh;
+    left: 40vw;
+    z-index: -3;
+  }
+  .pos-4 img {
+    width: 20vw;
+    height: auto;
+  }
+  .pos-5 {
+    top: 110vh;
+    left: 10vw;
+  }
+  .pos-5 img {
+    width: 20vw;
+    height: auto;
+  }
+  .pos-6 {
+    top: 5vw;
+    left: 70vw;
+    z-index: -10;
+  }
+  .pos-6 img {
+    width: 20vw;
+    height: auto;
+  }
+  .pos-7 {
+    top: 50vh;
+    right: 7vw;
+    z-index: -20;
+  }
+  .pos-7 img {
+    width: 20vw;
+    height: auto;
+  }
+  .pos-8 {
+    top: 130vh;
+    left: 70vw;
+  }
+  .pos-8 img {
+    width: 20vw;
+    height: auto;
   }
 }
 
