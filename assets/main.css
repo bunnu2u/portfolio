@@ -126,10 +126,66 @@ main {
   object-position: 0 20%;
 }
 
+#background-elemtns {
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.window {
+  position: absolute;
+}
+.window-show {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.3s ease-in-out 0s forwards;
+}
+
 /* Extra small devices (phones, 600px and down) */
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* Medium devices (landscape tablets, 768px and up) */
 /* Large devices (laptops/desktops, 992px and up) */
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 992px) {
+  .pos-1 {
+    top: 20vh;
+    left: calc(10vw - 1rem);
+  }
+  .pos-1 img {
+    width: 30vw;
+    height: auto;
+  }
+  .pos-2 {
+    top: 3vh;
+    left: 25vw;
+    z-index: -10;
+  }
+  .pos-2 img {
+    width: 20vw;
+    height: auto;
+  }
+  .pos-3 {
+    top: calc(30vh - 5vw);
+    right: calc(20vw - 1rem);
+  }
+  .pos-3 img {
+    width: 20vw;
+    height: auto;
+  }
+  .pos-4 {
+    top: 10rem;
+    left: 10rem;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

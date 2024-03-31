@@ -150,6 +150,41 @@ main {
 }
 
 
+#background-elemtns {
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@mixin fadeUpAnimation($duration: 1s, $delay: 0s) {
+    animation: fadeUp $duration ease-in-out $delay forwards;
+}
+
+.window {
+    position: absolute;
+
+    &-show {
+        opacity: 0;
+        transform: translateY(20px);
+        @include fadeUpAnimation(0.3s, 0s); // Customize duration and delay as needed}
+
+    }
+}
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {}
 
@@ -159,8 +194,46 @@ main {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {}
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .pos {
+        &-1 {
+
+            top: calc(20vh);
+            left: calc(10vw - 1rem);
+
+            img {
+                width: 30vw;
+                height: auto;
+            }
+        }
+
+        &-2 {
+            top: 3vh;
+            left: 25vw;
+            z-index: -10;
+
+            img {
+                width: 20vw;
+                height: auto;
+            }
+        }
+
+        &-3 {
+            top: calc(30vh - 5vw);
+            right: calc(20vw - 1rem);
+
+            img {
+                width: 20vw;
+                height: auto;
+            }
+        }
+
+        &-4 {
+            top: 10rem;
+            left: 10rem;
+        }
+    }
+
+}
