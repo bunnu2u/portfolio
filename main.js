@@ -1,5 +1,16 @@
-function LoadImageWindow(src) {
-    fetch('/window.html').then(response => response.text())
-        .then(text => console.log(text))
-    // outputs the content of the text file
+function MakeWin(imgsrc, color, finId) {
+    (fetch('/window.html').then(response => response.text())
+        .then(text => $('#background-elemtns').append(text))
+        .then(response => {
+            $('#background-elemtns > #open #settable').attr('src', imgsrc)
+            $('#background-elemtns > #open').addClass(color)
+            $('#background-elemtns > #open').attr('id', finId)
+        }))
 }
+
+
+//settable
+//background-elemtns
+$(document).ready(function () {
+    MakeWin('./assets/images/draw1.jpg', 'yellow', 4);
+});

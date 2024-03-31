@@ -74,8 +74,6 @@ body {
 }
 .window {
   position: absolute;
-  min-width: 240px;
-  min-height: 240px;
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
@@ -125,8 +123,6 @@ body {
   color: black;
   display: inline-block;
   text-decoration: none;
-  margin: 0 0.15em;
-  padding: 0.35rem;
 }
 .window-item:first-letter {
   text-decoration: underline;
@@ -153,8 +149,6 @@ body {
 }
 .window-image {
   width: 100%;
-  min-width: 240px;
-  min-height: 200px;
   margin-right: 2rem;
   margin-bottom: 2rem;
   display: flex;
