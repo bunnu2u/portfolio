@@ -81,7 +81,7 @@ window.onload = (event) => {
     LoadAndStyleBackground();
 }
 $(window).on("scroll", function () {
-    if ($('.sticky').offset().top > 900) {
+    if ($('.sticky').offset().top > 800) {
         $('.navbar').addClass('navbar-hide');
     } else {
         if ($('.navbar').hasClass('navbar-hide'))
@@ -89,7 +89,7 @@ $(window).on("scroll", function () {
     }
 });
 
-$('.navbar-hide').on('click', function () {
+$('.navbar-hide').on('mousedown', function () {
     $('.navbar').removeClass('navbar-hide')
     $('.navbar-hide').addClass('navbar-show');
 })
