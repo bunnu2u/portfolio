@@ -80,3 +80,11 @@ async function LoadAndStyleBackground() {
 window.onload = (event) => {
     LoadAndStyleBackground();
 }
+$(window).on("scroll", function () {
+    if ($('.sticky').offset().top > 900) {
+        $('.navbar').addClass('navbar-hide');
+    } else {
+        if ($('.navbar').hasClass('navbar-hide'))
+            $('.navbar').removeClass('navbar-hide')
+    }
+});
