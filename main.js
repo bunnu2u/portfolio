@@ -75,31 +75,39 @@ async function LoadAndStyleBackground() {
         $('#bgw8').addClass('pos-8')
     });
 }
-function HideBar() {
-    $('.navbar').addClass('navbar-hide')
-    $('.navbar').removeClass('navbar-show');
-    console.log('hide');
-}
-
 //settable
 //background-elemtns
-function ShowBar() {
-    console.log('show');
-    $('.navbar').removeClass('navbar-hide')
-    $('.navbar').addClass('navbar-show');
-    $('.rollback').one('mousedown', function () { HideBar() })
+function Toggle() {
+    console.log('toggle fire');
+    $('.navbar').toggleClass('navbar-hide')
+    $('.navbar').toggleClass('navbar-show');
+    return true;
+
 }
 window.onload = (event) => {
     LoadAndStyleBackground();
 
 }
+$('.navbar').on('click', function (event) {
+    Toggle()
+    event.stopImmediatePropagation()
+})
+$('.rollback').on('click', function (event) {
+    Toggle()
+    event.stopImmediatePropagation()
+})
 $(window).on("scroll", function () {
-    if ($('.sticky').offset().top > 850) {
-        $('.navbar').addClass('navbar-hide');
-        $('.navbar').one('mousedown', function () { ShowBar() })
+    console.log($(window).scrollTop());
+    if ($(window).scrollTop() > 700) {
+        $('.navbar').addClass('navbar-hide')
+        $('.navbar').removeClass('navbar-show');
+        //HideBar()
+
     } else {
         if ($('.navbar').hasClass('navbar-hide')) {
             $('.navbar').removeClass('navbar-hide');
+        }
+        if ($('.navbar').hasClass('navbar-show')) {
             $('.navbar').removeClass('navbar-show');
         }
     }
