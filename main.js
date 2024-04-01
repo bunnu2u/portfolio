@@ -90,7 +90,7 @@ $(window).on("scroll", function () {
     }
 });
 
-
+$('.navbar-show::after').on('mousedown', function () { ToggleShow() })
 //
 function ToggleShow() {
     $('.navbar').toggleClass('navbar-hide')

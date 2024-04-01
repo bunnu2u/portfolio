@@ -37,6 +37,7 @@ main {
   right: 0;
   justify-content: space-between;
   gap: 1rem;
+  z-index: 10;
 }
 
 .nav-item {
@@ -251,6 +252,9 @@ main {
   .navbar-hide {
     gap: 0.5rem;
     right: -5vw;
+    justify-content: end;
+    width: 15vw;
+    height: 10vh;
   }
   .navbar-hide .nav-item {
     padding: 0;
@@ -264,6 +268,22 @@ main {
   }
   .navbar-hide span {
     display: none;
+  }
+  .navbar-show {
+    width: 100vw;
+    background-color: #FFF3CF;
+    padding: 0.3rem;
+  }
+  .navbar-show::after {
+    content: "";
+    display: block;
+    background-color: #DBB501;
+    border-right: 3vw solid black;
+    width: 6vw;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
