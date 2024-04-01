@@ -55,20 +55,20 @@ async function LoadAndStyleBackground() {
     MakeWin('assets/images/Picture1.png', 'yellow', 'bgw3', true).then(() => {
         $('#bgw3').addClass('pos-2');
     });
-    MakeWin('./assets/images/draw1.jpg', 'yellow', 'bgw1', true).then(() => {
+    MakeWin('./assets/images/draw1.jpg', 'blue', 'bgw1', true).then(() => {
         $('#bgw1').addClass('pos-3')
     });
 
     MakeWin('./assets/images/frog.jpg', 'yellow', 'bgw4').then(() => {
         $('#bgw4').addClass('pos-4')
     });
-    MakeWin('./assets/images/spaceship.png', 'yellow', 'bgw5').then(() => {
+    MakeWin('./assets/images/spaceship.png', 'blue', 'bgw5').then(() => {
         $('#bgw5').addClass('pos-5')
     });
     MakeWin('assets/images/prog.png', 'yellow', 'bgw6', true).then(() => {
         $('#bgw6').addClass('pos-6')
     });
-    MakeWin('./assets/images/bear.png', 'yellow', 'bgw7', true).then(() => {
+    MakeWin('./assets/images/bear.png', 'blue', 'bgw7', true).then(() => {
         $('#bgw7').addClass('pos-7')
     });
     MakeWin('./assets/images/cinamoo.jpg', 'yellow', 'bgw8').then(() => {
