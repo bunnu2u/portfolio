@@ -308,6 +308,31 @@ main {
             }
         }
     }
+
+    .navbar {
+        &-hide {
+            gap: 0.5rem;
+            right: -5vw;
+
+            .nav-item {
+                padding: 0;
+                height: 5vh;
+
+                &::before {
+                    width: 3vw;
+                    height: 5vh;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            span {
+                display: none;
+            }
+        }
+
+        &-show {}
+    }
 }
 
 

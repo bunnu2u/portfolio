@@ -248,6 +248,23 @@ main {
     width: 20vw;
     height: auto;
   }
+  .navbar-hide {
+    gap: 0.5rem;
+    right: -5vw;
+  }
+  .navbar-hide .nav-item {
+    padding: 0;
+    height: 5vh;
+  }
+  .navbar-hide .nav-item::before {
+    width: 3vw;
+    height: 5vh;
+    top: 0;
+    left: 0;
+  }
+  .navbar-hide span {
+    display: none;
+  }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 /* Small devices (portrait tablets and large phones, 600px and up) */

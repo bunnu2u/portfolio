@@ -88,3 +88,8 @@ $(window).on("scroll", function () {
             $('.navbar').removeClass('navbar-hide')
     }
 });
+
+$('.navbar-hide').on('click', function () {
+    $('.navbar').removeClass('navbar-hide')
+    $('.navbar-hide').addClass('navbar-show');
+})
