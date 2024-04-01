@@ -83,14 +83,16 @@ window.onload = (event) => {
 $(window).on("scroll", function () {
     if ($('.sticky').offset().top > 850) {
         $('.navbar').addClass('navbar-hide');
+        $('.navbar').on('mousedown', function () { ToggleShow() })
     } else {
         if ($('.navbar').hasClass('navbar-hide'))
-            $('.navbar').removeClass('navbar-hide')
+            $('.navbar').removeClass('navbar-hide');
     }
 });
 
-const navBtn = document.getElementById('.navbar-hide')
-navBtn.addEventListener('mousedown', () => {
-    $('.navbar').removeClass('navbar-hide')
-    $('.navbar-hide').addClass('navbar-show');
-})
+
+//
+function ToggleShow() {
+    $('.navbar').toggleClass('navbar-hide')
+    $('.navbar-hide').toggleClass('navbar-show');
+}
