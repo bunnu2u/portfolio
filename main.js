@@ -75,24 +75,34 @@ async function LoadAndStyleBackground() {
         $('#bgw8').addClass('pos-8')
     });
 }
+function HideBar() {
+    $('.navbar').addClass('navbar-hide')
+    $('.navbar').removeClass('navbar-show');
+    console.log('hide');
+}
+
 //settable
 //background-elemtns
+function ShowBar() {
+    console.log('show');
+    $('.navbar').removeClass('navbar-hide')
+    $('.navbar').addClass('navbar-show');
+    $('.rollback').one('mousedown', function () { HideBar() })
+}
 window.onload = (event) => {
     LoadAndStyleBackground();
+
 }
 $(window).on("scroll", function () {
     if ($('.sticky').offset().top > 850) {
         $('.navbar').addClass('navbar-hide');
-        $('.navbar').on('mousedown', function () { ToggleShow() })
+        $('.navbar').one('mousedown', function () { ShowBar() })
     } else {
-        if ($('.navbar').hasClass('navbar-hide'))
+        if ($('.navbar').hasClass('navbar-hide')) {
             $('.navbar').removeClass('navbar-hide');
+            $('.navbar').removeClass('navbar-show');
+        }
     }
 });
 
-$('.navbar-show::after').on('mousedown', function () { ToggleShow() })
 //
-function ToggleShow() {
-    $('.navbar').toggleClass('navbar-hide')
-    $('.navbar-hide').toggleClass('navbar-show');
-}

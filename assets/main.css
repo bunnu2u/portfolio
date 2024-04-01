@@ -29,6 +29,7 @@ main {
   width: auto;
   height: fit-content;
   min-height: 5rem;
+  z-index: 100;
 }
 
 .navbar {
@@ -37,7 +38,9 @@ main {
   right: 0;
   justify-content: space-between;
   gap: 1rem;
-  z-index: 10;
+}
+.navbar .rollback {
+  display: none;
 }
 
 .nav-item {
@@ -256,6 +259,9 @@ main {
     width: 15vw;
     height: 10vh;
   }
+  .navbar-hide .rollback {
+    display: none;
+  }
   .navbar-hide .nav-item {
     padding: 0;
     height: 5vh;
@@ -270,20 +276,26 @@ main {
     display: none;
   }
   .navbar-show {
-    width: 100vw;
     background-color: #FFF3CF;
     padding: 0.3rem;
+    margin-right: -10vw;
+    z-index: -1;
   }
-  .navbar-show::after {
-    content: "";
+  .navbar-show .nav-item {
+    padding: 0;
+  }
+  .navbar-show .border::before {
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .navbar-show .rollback {
+    z-index: 2;
     display: block;
     background-color: #DBB501;
     border-right: 3vw solid black;
     width: 6vw;
     height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */

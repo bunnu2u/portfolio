@@ -39,6 +39,7 @@ main {
     width: auto;
     height: fit-content;
     min-height: 5rem;
+    z-index: 100;
 }
 
 .navbar {
@@ -47,7 +48,10 @@ main {
     right: 0;
     justify-content: space-between;
     gap: 1rem;
-    z-index: 10;
+
+    .rollback {
+        display: none;
+    }
 }
 
 .nav {
@@ -318,6 +322,10 @@ main {
             width: 15vw;
             height: 10vh;
 
+            .rollback {
+                display: none;
+            }
+
             .nav-item {
                 padding: 0;
                 height: 5vh;
@@ -336,20 +344,29 @@ main {
         }
 
         &-show {
-            width: 100vw;
             background-color: $light-yellow;
             padding: 0.3rem;
+            margin-right: -10vw;
+            z-index: -1;
 
-            &::after {
-                content: "";
+            .nav-item {
+                padding: 0;
+
+            }
+
+            .border::before {
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+
+            & .rollback {
+                z-index: 2;
                 display: block;
                 background-color: #DBB501;
                 border-right: 3vw solid black;
                 width: 6vw;
                 height: auto;
-                position: absolute;
-                top: 0;
-                left: 0;
             }
         }
     }
