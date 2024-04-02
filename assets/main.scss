@@ -52,6 +52,30 @@ main {
     .rollback {
         display: none;
     }
+
+    .rollout {
+        display: none;
+
+        .filler {
+            border: 6px solid black;
+            background-color: rgba(255, 255, 255, 0);
+            overflow: visible;
+            padding: 1.3rem 0.5rem 0.5rem 1.3rem;
+
+            &::before {
+                content: "";
+                display: block;
+                background-color: #DBB501;
+                width: calc(100% + 0.5rem);
+                height: calc(100% + 0.5rem);
+                position: absolute;
+                top: 0.4rem;
+                left: 0.4rem;
+                z-index: -3;
+                transition: all 0.4s ease-out;
+            }
+        }
+    }
 }
 
 .nav {
@@ -368,16 +392,29 @@ main {
                 display: none;
             }
 
-            .nav-item {
-                padding: 0;
-                height: 5vh;
+            .rollout {
+                display: flex;
+                justify-content: end;
+                width: 15vw;
+                height: 10vh;
+                gap: 0.5rem;
 
-                &::before {
-                    width: 3vw;
+                .filler {
+                    padding: 0;
                     height: 5vh;
-                    top: 0;
-                    left: 0;
+
+                    &::before {
+                        width: 3vw;
+                        height: 5vh;
+                        top: 0;
+                        left: 0;
+                    }
                 }
+            }
+
+            .nav-item {
+
+                display: none;
             }
 
             span {

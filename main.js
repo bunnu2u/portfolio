@@ -88,19 +88,21 @@ window.onload = (event) => {
     LoadAndStyleBackground();
     $('#links').on('click', function () {
         location.href = './assets/links.html'
+        event.stopImmediatePropagation()
     })
 
     $('#works').on('click', function () {
         location.href = './assets/works.html'
+        event.stopImmediatePropagation()
     })
 
 }
 $('.navbar').on('click', function (event) {
-    Toggle()
+    setTimeout(Toggle(), 200)
     event.stopImmediatePropagation()
 })
 $('.rollback').on('click', function (event) {
-    Toggle()
+    setTimeout(Toggle(), 200)
     event.stopImmediatePropagation()
 })
 $(window).on("scroll", function () {

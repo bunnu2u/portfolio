@@ -42,6 +42,27 @@ main {
 .navbar .rollback {
   display: none;
 }
+.navbar .rollout {
+  display: none;
+}
+.navbar .rollout .filler {
+  border: 6px solid black;
+  background-color: rgba(255, 255, 255, 0);
+  overflow: visible;
+  padding: 1.3rem 0.5rem 0.5rem 1.3rem;
+}
+.navbar .rollout .filler::before {
+  content: "";
+  display: block;
+  background-color: #DBB501;
+  width: calc(100% + 0.5rem);
+  height: calc(100% + 0.5rem);
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  z-index: -3;
+  transition: all 0.4s ease-out;
+}
 
 .nav-item {
   font-size: 1.5rem;
@@ -297,15 +318,25 @@ main {
   .navbar-hide .rollback {
     display: none;
   }
-  .navbar-hide .nav-item {
+  .navbar-hide .rollout {
+    display: flex;
+    justify-content: end;
+    width: 15vw;
+    height: 10vh;
+    gap: 0.5rem;
+  }
+  .navbar-hide .rollout .filler {
     padding: 0;
     height: 5vh;
   }
-  .navbar-hide .nav-item::before {
+  .navbar-hide .rollout .filler::before {
     width: 3vw;
     height: 5vh;
     top: 0;
     left: 0;
+  }
+  .navbar-hide .nav-item {
+    display: none;
   }
   .navbar-hide span {
     display: none;
