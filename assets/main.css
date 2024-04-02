@@ -114,6 +114,7 @@ main {
   background-color: rgb(250, 241, 233);
   box-shadow: 0.4rem 0.4rem #7d98c4;
   z-index: -10;
+  max-width: 40%;
 }
 .about-text ::after {
   clear: both;
