@@ -46,6 +46,14 @@ main {
 .nav-item {
   font-size: 1.5rem;
 }
+.nav-item:hover {
+  cursor: pointer;
+}
+.nav-item:hover.border::before {
+  top: 0;
+  left: 0;
+  transition: all 0.4s ease-out;
+}
 
 .border {
   border: 6px solid black;
@@ -63,6 +71,7 @@ main {
   top: 0.4rem;
   left: 0.4rem;
   z-index: -3;
+  transition: all 0.4s ease-out;
 }
 
 .intro {
@@ -114,7 +123,6 @@ main {
   background-color: rgb(250, 241, 233);
   box-shadow: 0.4rem 0.4rem #7d98c4;
   z-index: -10;
-  max-width: 40%;
 }
 .about-text ::after {
   clear: both;
@@ -335,6 +343,9 @@ main {
   .about {
     padding: 3vh 0;
   }
+  .about-photo {
+    max-width: 40%;
+  }
   .heading {
     margin-bottom: 1rem;
     margin-left: 0;
@@ -417,6 +428,7 @@ main {
     margin-bottom: 2vh;
     margin-top: 2vh;
     margin-left: 3vw;
+    max-width: 40%;
   }
 }
 /* Large devices (laptops/desktops, 992px and up) */

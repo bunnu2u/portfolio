@@ -58,8 +58,19 @@ main {
 
     &-item {
         font-size: 1.5rem;
+
+        &:hover {
+            cursor: pointer;
+
+            &.border::before {
+                top: 0;
+                left: 0;
+                transition: all 0.4s ease-out;
+            }
+        }
     }
 }
+
 
 .border {
     border: 6px solid black;
@@ -78,6 +89,7 @@ main {
         top: 0.4rem;
         left: 0.4rem;
         z-index: -3;
+        transition: all 0.4s ease-out;
     }
 }
 
@@ -137,7 +149,6 @@ main {
         background-color: rgb(250, 241, 233);
         box-shadow: 0.4rem 0.4rem $blue;
         z-index: -10;
-        max-width: 40%;
 
         ::after {
             clear: both;
@@ -416,6 +427,10 @@ main {
 
     .about {
         padding: 3vh 0;
+
+        &-photo {
+            max-width: 40%;
+        }
     }
 
     .heading {
@@ -523,6 +538,7 @@ main {
             margin-bottom: 2vh;
             margin-top: 2vh;
             margin-left: 3vw;
+            max-width: 40%;
         }
     }
 }

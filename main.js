@@ -86,44 +86,38 @@ function Toggle() {
 }
 window.onload = (event) => {
     LoadAndStyleBackground();
-    $('links').on('click', function () {
-        // Perform AJAX request to load another page
-        $.ajax({
-            url: './assests/links.html',
-            success: function (data) {
-                // Replace the current page content with the content of the loaded page
-                $('body').html(data);
-            },
-            error: function (xhr, status, error) {
-                // Handle errors if any
-                console.error('Error:', status, error);
-            }
-        })
+    $('#links').on('click', function () {
+        location.href = './assets/links.html'
+    })
 
-    }
+    $('#works').on('click', function () {
+        location.href = './assets/works.html'
+    })
+
+}
 $('.navbar').on('click', function (event) {
-        Toggle()
-        event.stopImmediatePropagation()
-    })
+    Toggle()
+    event.stopImmediatePropagation()
+})
 $('.rollback').on('click', function (event) {
-        Toggle()
-        event.stopImmediatePropagation()
-    })
+    Toggle()
+    event.stopImmediatePropagation()
+})
 $(window).on("scroll", function () {
-        console.log($(window).scrollTop());
-        if ($(window).scrollTop() > 700) {
-            $('.navbar').addClass('navbar-hide')
-            $('.navbar').removeClass('navbar-show');
-            //HideBar()
+    console.log($(window).scrollTop());
+    if ($(window).scrollTop() > 700) {
+        $('.navbar').addClass('navbar-hide')
+        $('.navbar').removeClass('navbar-show');
+        //HideBar()
 
-        } else {
-            if ($('.navbar').hasClass('navbar-hide')) {
-                $('.navbar').removeClass('navbar-hide');
-            }
-            if ($('.navbar').hasClass('navbar-show')) {
-                $('.navbar').removeClass('navbar-show');
-            }
+    } else {
+        if ($('.navbar').hasClass('navbar-hide')) {
+            $('.navbar').removeClass('navbar-hide');
         }
-    });
+        if ($('.navbar').hasClass('navbar-show')) {
+            $('.navbar').removeClass('navbar-show');
+        }
+    }
+});
 
 //
