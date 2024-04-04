@@ -63,7 +63,7 @@ async function LoadAndStyleBackground() {
     MakeWin('./assets/images/frog.jpg', 'yellow', 'bgw4').then(() => {
         $('#bgw4').addClass('pos-4')
     });
-    MakeWin('./assets/images/spaceship.png', 'blue', 'bgw5').then(() => {
+    MakeWin('./assets/images/spaceship.png', 'yellow', 'bgw5').then(() => {
         $('#bgw5').addClass('pos-5')
     });
     MakeWin('assets/images/prog.png', 'yellow', 'bgw6', true).then(() => {
