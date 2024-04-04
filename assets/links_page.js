@@ -19,6 +19,10 @@
 }
 
 window.onload = (event) => {
+
+    history.replaceState('data to be passed', 'Title of the page', '/links');
+
+
     const ins_text = $('#content_links').prop('outerHTML');
 
     $('#content_links').remove();
@@ -33,6 +37,7 @@ window.onload = (event) => {
         $('#sashe').on('click', function () {
             window.location.href = 'https://www.sashe.sk/bunnucrafts'
         })
+
     });
 
 
