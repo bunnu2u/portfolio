@@ -20,7 +20,7 @@
 
 window.onload = (event) => {
 
-    history.replaceState('data to be passed', 'Title of the page', '/links');
+    history.pushState('data to be passed', 'Title of the page', '/links');
 
 
     const ins_text = $('#content_links').prop('outerHTML');
