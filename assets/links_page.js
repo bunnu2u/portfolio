@@ -22,12 +22,19 @@ window.onload = (event) => {
     const ins_text = $('#content_links').prop('outerHTML');
 
     $('#content_links').remove();
-    WindowBlank('social_window', ins_text, 'yellow', 'win-links');
+    WindowBlank('social_window', ins_text, 'yellow', 'win-links').then(function () {
 
-    // Add click event listener to the button
-    $('#linkedin').on('click', function () {
-        window.location.href = 'https://www.linkedin.com/in/petra-mladšia'
+        $('#linkedin').on('click', function () {
+            window.location.href = 'https://www.linkedin.com/in/petra-mladšia'
+        })
+        $('#instagram').on('click', function () {
+            window.location.href = 'https://www.instagram.com/bunn_2u'
+        })
+        $('#sashe').on('click', function () {
+            window.location.href = 'https://www.sashe.sk/bunnucrafts'
+        })
+    });
 
-    })
+
 
 }
