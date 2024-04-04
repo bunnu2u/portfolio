@@ -29,6 +29,7 @@ function MakeWin(imgsrc, color, finId, visOnStart = false) {
     });
 }
 
+
 function isInViewport(element) {
     var rect = element.getBoundingClientRect();
     return (

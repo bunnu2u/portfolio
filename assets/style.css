@@ -147,13 +147,13 @@ body {
   right: 0;
   z-index: 1;
 }
-.window-image {
+.window-image, .window-inside {
   width: 100%;
   margin-right: 2rem;
   margin-bottom: 2rem;
   display: flex;
 }
-.window-image:focus, .window-image:active {
+.window-image:focus, .window-image:active, .window-inside:focus, .window-inside:active {
   outline: none;
 }
 .window-scroll {
