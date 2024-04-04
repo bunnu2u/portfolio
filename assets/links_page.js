@@ -26,7 +26,7 @@ window.onload = (event) => {
 
     // Add click event listener to the button
     $('#linkedin').on('click', function () {
-        location.href = 'https://www.linkedin.com/in/petra-mladšia'
+        window.location.href = 'https://www.linkedin.com/in/petra-mladšia'
 
     })
 
