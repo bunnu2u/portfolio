@@ -5,7 +5,7 @@
   position: relative;
 }
 
-.heading, .title {
+.heading, .title, h3 {
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   font-style: normal;
@@ -17,10 +17,27 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: #c7ced1;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 main {
   margin: 0 10vw;
+}
+
+h3 {
+  -webkit-text-stroke: 1px black;
+  color: #DBB501;
+  font-size: 1.5rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
 }
 
 .sticky {

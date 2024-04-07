@@ -26,11 +26,28 @@ body {
     font-weight: 400;
     font-style: normal;
     background-color: $neutral-second;
+    color: black;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 main {
     margin: 0 10vw;
+}
+
+h3 {
+    @extend %heading-font;
+    -webkit-text-stroke: 1px black;
+    color: $dark-yellow;
+    font-size: 1.5rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
 }
 
 .sticky {

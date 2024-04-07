@@ -14,21 +14,27 @@
     padding: 0.7rem;
 }
 
-.social {
-    &-window {
-        width: 100%;
-        height: 100vh;
-        padding: 15vh 0;
+%border-settings {
+    top: 0.2rem;
+    left: 0.2rem;
+}
 
+%border-animation {
+    cursor: pointer;
+
+    &.border::before {
+        top: 0.2rem;
+        left: 0.2rem;
+        top: 0;
+        left: 0;
+        transition: all 0.4s ease-out;
     }
+}
 
+.animated {
     &-link {
-        width: 90%;
-
-
         &.border::before {
-            top: 0.2rem;
-            left: 0.2rem;
+            @extend %border-settings;
         }
 
         &:hover {
@@ -45,6 +51,28 @@
     }
 }
 
+.social {
+    &-window {
+        width: 100%;
+        height: 100vh;
+        padding: 15vh 0;
+
+    }
+
+    &-link {
+        width: 90%;
+
+
+        &.border::before {
+            @extend %border-settings;
+        }
+
+        &:hover {
+            @extend %border-animation;
+        }
+    }
+}
+
 .links {
     z-index: 10;
     display: flex;
@@ -55,9 +83,105 @@
     gap: 1rem;
 }
 
+.works {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about {
+    &-text {
+        transform: translateY(20px);
+        animation: fadeUp 0.9s ease-in-out 0s forwards;
+    }
+}
+
+//transform: translateY(20px);
+//animation: fadeUp 0.9s ease-in-out 0s forwards;
+#game {
+    img {
+        width: 60vw;
+        height: auto;
+    }
+}
+
+#shop {
+    img {
+        width: 50vw;
+        height: auto;
+    }
+}
+
+#photo-prog {
+    img {
+        width: 50vw;
+        height: auto;
+    }
+}
+
+#game,
+#photo-prog,
+#shop {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    gap: 1.25rem;
+}
+
 @media only screen and (min-width: 600px) {
     .social-window {
         max-width: 400px;
     }
 
+    #game {
+        img {
+            width: 40vw;
+            height: auto;
+        }
+    }
+
+    #shop {
+        img {
+            width: 30vw;
+            height: auto;
+        }
+    }
+
+    #photo-prog {
+        img {
+            width: 30vw;
+            height: auto;
+        }
+    }
+
+    #game,
+    #photo-prog,
+    #shop {
+        flex-direction: row;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+    #game {
+        img {
+            width: 25vw;
+            height: auto;
+        }
+    }
+
+    #shop {
+        img {
+            width: 20vw;
+            height: auto;
+        }
+    }
+
+    #photo-prog {
+        img {
+            width: 20vw;
+            height: auto;
+        }
+    }
 }
