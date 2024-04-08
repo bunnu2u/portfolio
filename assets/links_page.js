@@ -73,4 +73,8 @@ window.onload = (event) => {
     WindowPhoto('photo-prog #win-intro-photo', prog_img, 'blue', 'ph-prog-photo');
 
 
+    const prog_org = $('#photo-prog #win-example-photo').prop('innerHTML');
+    $('#photo-prog #win-example-photo').empty();
+    WindowPhoto('photo-prog #win-example-photo', prog_org, 'yellow', 'ex-prog-photo');
+
 }

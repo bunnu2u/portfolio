@@ -50,6 +50,11 @@ h3 {
     flex-direction: column;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
 .sticky {
     position: sticky;
     top: 3vh;

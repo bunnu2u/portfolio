@@ -20,12 +20,19 @@
     <style>
         .window {
             width: fit-content;
+            height: fit-content;
         }
     </style>
 </head>
 
 <body style="margin: 10vh 0;">
+    <div id="home-page" class="home-button blue">
+        <a href="../" class="home-backlink">
+            <img src="home1.svg" />
+        </a>
+    </div>
     <main class="works">
+
         <header>
             <h2 class="heading" text="Works">Works</h2>
         </header>
@@ -39,7 +46,12 @@
                 <div class="about-text">
                     <h3>Colors game</h3>
                     <div class="works-text">
-
+                        <p>Try out my demo (that may never get its full game), made as my graduation project.</p>
+                        <p>Play as a small girl, whose world is devoid of all color, and has been as long as she can
+                            remember. Stepping out of her home she finds herself in a world completly different from
+                            what she knew, full of color. This gives her a chance to bring color to her own world.</p>
+                        <p>Game was made with Unity3D and coded in C#. Art was made by me as well, in Krita/Photoshop
+                            and Illustrator.</p>
                     </div>
                 </div>
                 <a href="downloads/colors_demo.zip" download="colors_demo.zip">
@@ -57,24 +69,42 @@
             </div>
             <div class="column">
                 <div class="about-text">
-                    <h3>Colors game</h3>
+                    <h3>My craft shop</h3>
                     <div class="works-text">
-
+                        <p>
+                            Crochet and knitting (and their rise in popularity) has brought out my own crochet and
+                            knitting skills I learned as a child. My main reason for opening this small shop and selling
+                            my creations is that I simply don't have enough space to keep all the things i make.
+                        </p>
                     </div>
                 </div>
+                <a href="https://www.sashe.sk/bunnucrafts">
+                    <div id='shop_link' class="animated-link border">
+                        <span>Visit store</span>
+                    </div>
+                </a>
             </div>
         </section>
         <section id="photo-prog">
-            <div id="win-intro-photo">
-                <div class="works-image">
-                    <img src="images/spaceship.png" />
-                </div>
-            </div>
             <div class="column">
                 <div class="about-text">
-                    <h3>Colors game</h3>
+                    <h3>Image transformation program</h3>
                     <div class="works-text">
-
+                        <p>About 5 years ago i made a program to transform any image into duotone character art. Program
+                            was for Windows 7 and mainly in C#. I am working on rewriting it in Javascript so i can have
+                            it here on this web. </p>
+                    </div>
+                </div>
+                <div class="var-images" style="gap: 1rem;">
+                    <div id="win-example-photo">
+                        <div class="works-image">
+                            <img src="images/space_original.jpg" />
+                        </div>
+                    </div>
+                    <div id="win-intro-photo">
+                        <div class="works-image">
+                            <img src="images/spaceship.png" />
+                        </div>
                     </div>
                 </div>
             </div>
