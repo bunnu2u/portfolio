@@ -105,6 +105,17 @@ p {
     }
 }
 
+footer {
+    width: 100%;
+    background-color: $yellow;
+    min-height: 10vh;
+    padding: 2rem 1rem;
+
+    .row {
+        justify-content: space-between;
+    }
+}
+
 .nav {
 
     &-item {
@@ -351,8 +362,8 @@ p {
 
         &-4 {
 
-            top: 146vh;
-            left: 4vw;
+            top: 125vh;
+            right: 4vw;
             z-index: -3;
 
             img {
@@ -384,7 +395,7 @@ p {
         }
 
         &-7 {
-
+            display: none;
             top: 180vh;
             right: 2vw;
             z-index: -20;
@@ -572,7 +583,7 @@ p {
         }
 
         &-7 {
-
+            display: none;
             top: 180vh;
             right: 2vw;
             z-index: -20;

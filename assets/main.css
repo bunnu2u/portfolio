@@ -91,6 +91,16 @@ p {
   transition: all 0.4s ease-out;
 }
 
+footer {
+  width: 100%;
+  background-color: #e8c872;
+  min-height: 10vh;
+  padding: 2rem 1rem;
+}
+footer .row {
+  justify-content: space-between;
+}
+
 .nav-item {
   font-size: 1.5rem;
 }
@@ -291,8 +301,8 @@ p {
     height: auto;
   }
   .pos-4 {
-    top: 146vh;
-    left: 4vw;
+    top: 125vh;
+    right: 4vw;
     z-index: -3;
   }
   .pos-4 img {
@@ -318,6 +328,7 @@ p {
     height: auto;
   }
   .pos-7 {
+    display: none;
     top: 180vh;
     right: 2vw;
     z-index: -20;
@@ -463,6 +474,7 @@ p {
     height: auto;
   }
   .pos-7 {
+    display: none;
     top: 180vh;
     right: 2vw;
     z-index: -20;
