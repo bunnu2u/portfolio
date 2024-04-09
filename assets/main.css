@@ -95,10 +95,22 @@ footer {
   width: 100%;
   background-color: #e8c872;
   min-height: 10vh;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 0 1rem;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 1rem;
+  color: #FFF3CF;
 }
 footer .row {
   justify-content: space-between;
+}
+footer .row div:first-child {
+  text-align: left;
+}
+footer .row div:last-child {
+  text-align: right;
 }
 
 .nav-item {
@@ -273,6 +285,9 @@ footer .row {
     overflow: visible;
     height: 10rem;
     padding: 0;
+  }
+  footer {
+    font-size: 0.7rem;
   }
   .pos-1 {
     top: 5vh;
