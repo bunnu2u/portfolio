@@ -7,6 +7,11 @@ $light-blue: #d4e0f5;
 $blue: #7d98c4;
 $dark-blue: #565877;
 
+@font-face {
+    font-family: 'Fixedsys';
+    src: url('./image-gen/FSEX302.ttf');
+}
+
 * {
     box-sizing: border-box;
     margin: 0;

@@ -2,6 +2,7 @@
   position: sticky;
   left: 1rem;
   top: 1.5vh;
+  width: -moz-fit-content;
   width: fit-content;
 }
 #home-page img {
@@ -181,6 +182,4 @@
     width: 20vw;
     height: auto;
   }
-}
-
-/*# sourceMappingURL=side.css.map */
+}/*# sourceMappingURL=side.css.map */

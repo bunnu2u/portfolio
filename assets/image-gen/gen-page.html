@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bunn Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Silkscreen:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Micro+5&family=Press+Start+2P&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link hreflang="en" href="../style.css" rel="stylesheet">
+    <link hreflang="en" rel="stylesheet" href="../main.css">
+    <link hreflang="en" rel="stylesheet" href="../side.css">
+    <link hreflang="en" rel="stylesheet" href="img-gen.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../downloads/marvinj-1.0.min.js"></script>
+</head>
+
+<body>
+    <div id="home-page" class="home-button blue">
+        <a href="/" class="home-backlink">
+            <img src="../home1.svg" />
+        </a>
+    </div>
+    <main>
+        <div class="prog-border" id="prog-border">
+            <div class="prog-window" id="prog-window">
+
+                <form id="imageInfo">
+                    <label for="multi">Image width set to </label>
+                    <select name="multi" id="multi">
+                        <option value="50">50</option>
+                        <option value="100" selected>100</option>
+                        <option value="150">150</option>
+                        <option value="200">200</option>
+                        <option value="250">250</option>
+                        <option value="300">300</option>
+                        <option value="400">400</option>
+                        <option value="500">500</option>
+                    </select>
+                    <span> characters. </span>
+                    <br>
+                    <label for="foreground">Text color:</label>
+                    <input type="color" name="foreground" id="foreground" value="#4AF626" />
+                    <label for="background">Background color:</label>
+                    <input type="color" name="background" id="background" value="#000000" />
+                    <!--
+                        <select>
+                            <option>.:-=+*#%@</option>
+                        </select>
+                    -->
+                    <br>
+                    <input type="file" name="imageToConvert" id="imageToConvert" accept="image/*" />
+                    <input type="submit" id="imgChosen">
+                </form>
+                <div style='font-family: "Fixedsys";' class="canv-img" id="prep-img">
+                    <canvas id="input" width="200" height="200">
+
+                    </canvas>
+                    <canvas id="output" width="200" height="200">
+                    </canvas>
+                </div>
+
+                <div class="create-border">
+                    <div class="img-in border-photo">
+                        <img id="img-prez-in" src="" />
+                    </div>
+                    <div class="img-out border-photo">
+                        <img id="img-prez-out" src="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="img-gen.js">
+
+    </script>
+</body>
+
+</html>

@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Fixedsys";
+  src: url("./image-gen/FSEX302.ttf");
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -54,6 +58,7 @@ p {
   position: sticky;
   top: 3vh;
   width: auto;
+  height: -moz-fit-content;
   height: fit-content;
   min-height: 5rem;
   z-index: 100;
@@ -225,8 +230,10 @@ footer .row div:last-child {
 .about-photo img {
   width: 100%;
   aspect-ratio: 1;
-  object-fit: cover;
-  object-position: 0 20%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 20%;
+     object-position: 0 20%;
 }
 
 .clear::after {
@@ -590,6 +597,4 @@ footer .row div:last-child {
     width: 20vw;
     height: auto;
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
