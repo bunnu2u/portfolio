@@ -1,8 +1,72 @@
 .prog-window {
   padding: 5%;
 }
+.prog-window .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.prog-window select {
+  font-family: "Courier Prime", monospace;
+  border: 4px solid black;
+  background-color: #FFF3CF;
+}
+.prog-window select option {
+  font-family: "Courier Prime", monospace;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+}
+.prog-window input {
+  font-family: "Courier Prime", monospace;
+}
+.prog-window input[type=color i] {
+  border: 0px;
+  block-size: 3rem;
+  inline-size: 3rem;
+  padding: 0;
+  padding-block: 0;
+  padding-inline: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+.prog-window input[type=submit i] {
+  background-color: #FFF3CF;
+  border: 3px solid black;
+}
+
+.button {
+  border: 6px solid black;
+  background-color: rgba(255, 255, 255, 0);
+  overflow: visible;
+  padding: 0.3rem 0.5rem 0.5rem 0.3rem;
+}
+.button::before {
+  content: "";
+  display: block;
+  background-color: #DBB501;
+  width: calc(100% + 0.5rem);
+  height: calc(100% + 0.5rem);
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  z-index: -3;
+  transition: all 0.4s ease-out;
+}
+
+.fileInput label input {
+  position: absolute;
+  top: -1000px;
+}
+
 .create-border {
   display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@media only screen and (min-width: 600px) {
+  .create-border {
+    flex-direction: row;
+  }
 }
 .create-border div {
   width: 40%;

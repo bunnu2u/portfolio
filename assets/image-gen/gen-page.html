@@ -26,40 +26,53 @@
 
 <body>
     <div id="home-page" class="home-button blue">
-        <a href="/" class="home-backlink">
+        <a href="../../" class="home-backlink">
             <img src="../home1.svg" />
         </a>
     </div>
     <main>
         <div class="prog-border" id="prog-border">
             <div class="prog-window" id="prog-window">
+                <div class="row">
+                    <form id="imageInfo">
+                        <label for="multi">Image width set to </label>
+                        <select name="multi" id="multi">
+                            <option value="50">50</option>
+                            <option value="100" selected>100</option>
+                            <option value="150">150</option>
+                            <option value="200">200</option>
+                            <option value="250">250</option>
+                            <option value="300">300</option>
+                            <option value="400">400</option>
+                            <option value="500">500</option>
+                        </select>
+                        <span> characters. </span>
+                </div>
+                <div class="row">
 
-                <form id="imageInfo">
-                    <label for="multi">Image width set to </label>
-                    <select name="multi" id="multi">
-                        <option value="50">50</option>
-                        <option value="100" selected>100</option>
-                        <option value="150">150</option>
-                        <option value="200">200</option>
-                        <option value="250">250</option>
-                        <option value="300">300</option>
-                        <option value="400">400</option>
-                        <option value="500">500</option>
-                    </select>
-                    <span> characters. </span>
-                    <br>
                     <label for="foreground">Text color:</label>
                     <input type="color" name="foreground" id="foreground" value="#4AF626" />
+                </div>
+                <div class="row">
+
                     <label for="background">Background color:</label>
                     <input type="color" name="background" id="background" value="#000000" />
-                    <!--
+                </div>
+                <!--
                         <select>
                             <option>.:-=+*#%@</option>
                         </select>
                     -->
-                    <br>
-                    <input type="file" name="imageToConvert" id="imageToConvert" accept="image/*" />
-                    <input type="submit" id="imgChosen">
+                <div class="row">
+                    <div class="fileInput">
+
+                        <label for="imageToConvert"> Select photo
+
+                            <input type="file" name="imageToConvert" id="imageToConvert" accept="image/*" />
+                        </label>
+                    </div>
+                    <input type="submit" id="imgChosen" value="Create" class="button">
+                </div>
                 </form>
                 <div style='font-family: "Fixedsys";' class="canv-img" id="prep-img">
                     <canvas id="input" width="200" height="200">
